@@ -1,4 +1,4 @@
-<h1 align="center">Todo app</h1>
+<h1 align="center">eSports</h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -11,7 +11,7 @@
 </p>
 
 <h1 align="center">
-    <img src="https://github.com/Renan-Gust/Todo-app/blob/main/public/images/todo-app.jpg" alt="todo-app" />
+  <img src="https://github.com/Renan-Gust/eSports/blob/main/web/public/Landing.png" alt="esports" />
 </h1>
 
 <br>
@@ -24,6 +24,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org)
 - [Vite](https://vitejs.dev/)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Radix](https://www.radix-ui.com/)
 
 ## Back-end
 - [TypeScript](https://www.typescriptlang.org/)
@@ -82,7 +84,7 @@ $ npm install
 $ npm run dev
 ```
 
-O app estará disponível no seu browser pelo endereço http://localhost:3000.
+O app estará disponível no seu browser pelo endereço http://127.0.0.1:5173.
 
 ## 💻 Projeto
 
