@@ -40,10 +40,34 @@ $ git clone git@github.com:Renan-Gust/eSports.git
 $ cd todo-app
 ```
 
+### Back-end
+
 Para iniciá-lo, siga os passos abaixo:
 ```bash
 ## Yarn
 # Instalar as dependências
+$ cd server
+$ yarn
+
+# Iniciar o projeto
+$ yarn dev
+
+## NPM
+# Instalar as dependências
+$ cd sever
+$ npm install
+
+# Iniciar o projeto
+$ npm run dev
+```
+
+### Front-end
+
+Para iniciá-lo, siga os passos abaixo:
+```bash
+## Yarn
+# Instalar as dependências
+$ cd web
 $ yarn
 
 # Iniciar o projeto
@@ -57,6 +81,7 @@ $ npm install
 # Iniciar o projeto
 $ npm run dev
 ```
+
 O app estará disponível no seu browser pelo endereço http://localhost:3000.
 
 ## 💻 Projeto
