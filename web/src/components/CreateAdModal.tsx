@@ -1,8 +1,9 @@
 import { useState, useEffect, FormEvent } from 'react'
+import { Check, GameController } from 'phosphor-react'
 import axios from 'axios'
 
 import { Input } from './Form/Input'
-import { Check, GameController } from 'phosphor-react'
+
 import * as Dialog from '@radix-ui/react-dialog'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
@@ -29,7 +30,8 @@ export function CreateAdModal() {
         const formData = new FormData(event.target as HTMLFormElement)
         const data = Object.fromEntries(formData)
 
-        if(!data.name){
+        if(weekDays.length === 0){
+            alert("Preencha um dia")
             return
         }
 
@@ -66,6 +68,7 @@ export function CreateAdModal() {
                             name="game"
                             className="bg-zinc-900 py-3 px-4 rounded text-sm placeholder:text-zinc-5 appearance-none"
                             defaultValue=""
+                            required
                         >
                             <option disabled value="">Selecione o game que deseja jogar</option>
                             {games.map(game => (
@@ -73,18 +76,37 @@ export function CreateAdModal() {
                             ))}
                         </select>
                     </div>
+
                     <div className="flex flex-col gap-2">
                         <label htmlFor="name">Seu nome (ou nickname)</label>
-                        <Input id="name" name="name" placeholder="Como te chamam dentro do game?" />
+                        <Input 
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Como te chamam dentro do game?"
+                        />
                     </div>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="flex flex-col gap-2">
                             <label htmlFor="yearsPlaying">Joga há quantos anos?</label>
-                            <Input type="number" name="yearsPlaying" id="yearsPlaying" placeholder="Tudo bem ser ZERO" />
+                            <Input 
+                                type="number"
+                                name="yearsPlaying"
+                                id="yearsPlaying" 
+                                placeholder="Tudo bem ser ZERO"
+                                required
+                            />
                         </div>
+
                         <div className="flex flex-col gap-2">
                             <label htmlFor="discord">Qual seu discord?</label>
-                            <Input id="discord" name="discord" placeholder="Usuário#0000" />
+                            <Input 
+                                id="discord"
+                                name="discord"
+                                placeholder="Usuário#0000"
+                                required
+                            />
                         </div>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-6">
@@ -143,11 +165,29 @@ export function CreateAdModal() {
                                 </ToggleGroup.Item>
                             </ToggleGroup.Root>
                         </div>
+
                         <div className="flex flex-col gap-2 flex-1">
                             <label htmlFor="hourStart">Qual horário do dia?</label>
                             <div className="grid grid-cols-2 gap-2">
-                                <Input type="time" id="hourStart" name="hourStart" placeholder="De" />
-                                <Input type="time" id="hourEnd" name="hourEnd" placeholder="Até" />
+                                <div>
+                                    <Input 
+                                        type="time" 
+                                        id="hourStart"
+                                        name="hourStart"
+                                        placeholder="De"
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <Input
+                                        type="time" 
+                                        id="hourEnd"
+                                        name="hourEnd"
+                                        placeholder="Até"
+                                        required
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
