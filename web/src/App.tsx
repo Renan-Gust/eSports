@@ -36,7 +36,7 @@ function App() {
                 Seu <span className="bg-nlw-gradient bg-clip-text text-transparent">duo</span> está aqui.
             </h1>
 
-            <div className="grid grid-cols-6 gap-6 mt-16 mx-3 2xl:mx-0">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16 mx-3 2xl:mx-0">
                 {games.map(game => (
                     <GameBanner
                         key={game.id} 
